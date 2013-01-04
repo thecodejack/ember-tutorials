@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ember-Flot Graph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/datepicker.css" rel="stylesheet">
+   <!--  <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <script type="text/x-handlebars">
+            <div class='container'>
+
+ {{view App.DateTextField class="input-xlarge"}}
+
+{{view App.GraphView }}
+
+{{view App.GraphView}}
+
+{{view App.GraphView}}
+
+              </div>
+</script>
+
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script src="js/handlebars.js"></script>
+    <script src="js/ember_1.0pre.js"></script>
+
+    <script src="http://cloud.github.com/downloads/pjmorse/ember-skeleton/ember-data.min.js"></script>
+<script src="js/datepicker.js"></script>
+
+    <script type="text/javascript" src="js/jquery.flot.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.axislabels.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.resize.js"></script>
+    <script src="js/app.js"></script>
+      
+  </body>
+</html>

@@ -1,0 +1,1 @@
+In this tried adding flot graph as a view. 

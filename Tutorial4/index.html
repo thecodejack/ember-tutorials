@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+            <div class='container'>
+                <div id="contact-div">
+
+ <script type="text/x-handlebars">
+ <h2>There are {{ App.contactsController.length }} Contacts</h2>
+ {{#each App.contactsController}}
+      <h3>{{ name }}</h3>
+      <p>{{ contact_number }}</p>
+      <p>
+        <button class='btn btn-danger' {{action "deleteContact" target="App.contactsController"}}>Delete</button>
+      </p>
+    {{/each}}
+    </script>
+                    <script type="text/x-handlebars">
+              <legend>Add a Contact</legend>
+              
+                <div class='control-group'>
+                  <label class='control-label' for='name'>Name</label>
+                  <div class='controls'>
+                    {{view Ember.TextField class="input-xlarge" id="name" valueBinding="App.contactsController.name"}}
+                   <!--<input type='text' class='input-xlarge' id='name' >-->
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='contacts'>Contact Number</label>
+                  <div class='controls'>
+                  {{view Ember.TextField class="input-xlarge" id="contacts" valueBinding="App.contactsController.contact_no"}}
+                    <!--<input type='text' class='input-xlarge' id='contacts'>-->
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='dateText'>Date</label>
+                  <div class='controls'>
+                  {{view App.DateTextField class="input-xlarge" id="dateText" valueBinding="App.contactsController.date"}}
+                    
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button {{action "addContact" target="App.contactsController"}} class="btn btn-primary">Add Contact</button>
+                  <!--<button type="submit" class="btn btn-primary">Add Contact</button>-->
+                </div>
+              
+            </script>
+
+                    
+                </div>
+              </div>
+
+
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://cloud.github.com/downloads/emberjs/ember.js/ember-0.9.6.min.js"></script>
+    <script src="http://cloud.github.com/downloads/pjmorse/ember-skeleton/ember-data.min.js"></script>
+<script src="js/datepicker.js"></script>
+    <script src="js/app.js"></script>
+      
+  </body>
+</html>

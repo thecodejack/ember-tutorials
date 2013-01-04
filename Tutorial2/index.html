@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://cloud.github.com/downloads/emberjs/ember.js/ember-0.9.6.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+	<script type="text/x-handlebars">
+    Hello <b>{{Songs.mixmaster}}</b>
+</script>
+
+<script type="text/x-handlebars">
+    {{view Songs.ReviewTextArea}}
+</script>
+
+<script type="text/x-handlebars">
+    My songs have {{Songs.totalReviews}} reviews.
+</script>
+
+<script type="text/x-handlebars">
+    {{#if Songs.totalReviews}}
+        Read all my reviews!
+    {{else}}
+        There are no reviews right now.
+    {{/if}}
+</script>
+
+<script type="text/x-handlebars">
+    {{#each Songs.songsController}}
+        <h3>{{title}}</h3>
+        <p>{{artist}} - {{genre}}</p>
+    {{/each}}
+</script>
+
+</body>
+</html>

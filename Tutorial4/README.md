@@ -1,0 +1,1 @@
+This code is inspired from a ngauthier's BlackBoneJS example. This also contains a piece of code to attach jquery plugins(in this case date plugin).
