@@ -1,5 +1,5 @@
-ember-tutorials
-===============
+ember-tutorials(Deprecated)
+===========================
 
 While learning Ember.JS have gone through lot of links to understand the ember concepts
 
